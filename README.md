@@ -1,2 +1,2 @@
 # CRAHIT
-For the purposes of Cedar Rapids Area Homeschools IT Club.
+For the purposes of Cedar Rapids Area Home-schools IT Club.
