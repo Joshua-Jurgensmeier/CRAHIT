@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+   <title>This Controls an LED and Reads a Button</title>
+</head>
+
+<body>
+   <h1>This Controls an LED and Reads a Button</h1>
+   <h2>led {{ led }}
+   {% if led_state == true %}
+      is currently <strong>on</strong></h2>
+      <a href="/0">Turn off</a>
+   {% else %}
+      is currently <strong>off</strong></h2>
+      <a href="/1">Turn on</a>
+   {% endif %}
+
+   <h2>Button {{btn}}'s state is {{btn_state}}</h2>
+</body>
+</html>
