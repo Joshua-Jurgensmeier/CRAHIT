@@ -159,6 +159,7 @@ def decode(word_list):
         
     return message
 
+
 def main():
     # Print welcome/instructions
     print("Enter message in Morse Code. Hold button for 5 seconds to end message.")
