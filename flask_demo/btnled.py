@@ -21,13 +21,8 @@ def root():
     GPIO.output(led, GPIO.LOW)
     return "Go to /1"
 
-# Very breakable :) state should be 0 or 1
-@app.route("/<int:state>")
+@app.route("/<int(min=0, max=1):state>")
 def ledState(state):
-    # Convert url path to integer. Definitely could blow up.
-    # Could be fixed multiple ways. e.g. <int(min=0, max=1):state>
-    # Request for favicon.ico kept blowing up!
-    state
 
     GPIO.output(led, state)
 
@@ -37,6 +32,4 @@ def ledState(state):
     # Push our values out to the template, generate html, and then send it to client
     return render_template('./btnled.html', **templateData)
 
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=True)
+app.run(host="0.0.0.0", port=80, debug=True)
